@@ -1,0 +1,7 @@
+src/*
+!src/.gitkeep
+
+.vscode-server/*
+!.vscode-server/.gitkeep
+
+.env

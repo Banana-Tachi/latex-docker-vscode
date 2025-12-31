@@ -1,0 +1,15 @@
+services:
+  latex:
+    # コンテナ名
+    container_name: ${CONTAINER_NAME}
+    # Dockerfileへのパス
+    build: .
+    # ビルドされたイメージのタグ
+    image: ${HOST_NAME}/${SERVICE_NAME}:${VERSION}
+    # ボリュームマウント
+    volumes:
+      - ./src:/home/texlive/src
+      - ./.vscode-server:/home/texlive/.vscode-server
+    command: >
+      bash
+    tty: true
