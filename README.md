@@ -1,8 +1,8 @@
 # LaTeX-Docker-VSCode
 
 # Install
-1. .envの生成
-    ```
+1. ``.env`` の生成
+    ```sh
     cat <<EOF > .env
     CONTAINER_NAME=texlive
     HOST_NAME=texlive
@@ -15,13 +15,13 @@
     docker-compose up -d --build
     ```
 1. 権限変更
-    ```
+    ```sh
     sudo chmod -R 777 .vscode-server
     sudo chmod -R 777 src
     ```
-1. VSCodeを起動しコンテナにアタッチ
-1. コンテナ内でVSCodeの拡張機能 "LaTeX Workshop" を有効に
-1. VSCodeの設定に以下を追加
+1. VSCode を起動しコンテナにアタッチ
+1. コンテナ内で VSCode の拡張機能 "LaTeX Workshop" を有効に
+1. VSCode の設定に以下を追加
     ```json
     "latex-workshop.latex.tools": [
 	{
@@ -66,10 +66,12 @@
     ```
 
 # Using
-* src何にプロジェクトを置き、別リポジトリとして管理する
-* LaTeXコンパイル
+* ``src`` に LaTeX プロジェクトを置き、このリポジトリとは別リポジトリとして管理する
+* LaTeXコンパイルは以下のどちらか
     * VSCode のサイドバーの "TEX" でビルドを選択
-    * Ctrl+Shift+Pを押下し、 "Build with recipe" を検索・選択
+    * Ctrl+Shift+P を押下し、"Build with recipe" を検索・選択
+
+※ "Build with recipe" にショートカットを付けると便利
 
 # Reference
 * https://zenn.dev/kneephys/articles/a1f95c4d620524
