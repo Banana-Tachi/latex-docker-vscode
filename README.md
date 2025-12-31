@@ -43,7 +43,7 @@
             "-e","$latex=uplatex",
             "-e","$bibtex=upbibtex",
             "-e","$dvipdf='dvipdfmx %O -o %D %S'",
-            "-e","$pdf_mode=3",              // uplatex → dvipdfmx でPDF化
+            "-e","$pdf_mode=3",
 		    "-bibtex",
             "-synctex=1",
             "-interaction=nonstopmode",
