@@ -50,7 +50,7 @@
             "tools": ["latexmk-uplatex"]
         }
     ],
-    "latex-workshop.latex.recipe.default": "uplatex -> dvipdfmx"
+    "latex-workshop.latex.recipe.default": "lastUsed",
     ```
 
 # Using
