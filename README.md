@@ -1,23 +1,11 @@
 # LaTeX-Docker-VSCode
 
 # Install
-1. ``.env`` の生成
+1. インストールシェル実行  
+    （ ``.env`` の生成と Docker イメージのビルドの実行をするシェル）
     ```sh
-    cat <<EOF > .env
-    CONTAINER_NAME=texlive
-    HOST_NAME=texlive
-    SERVICE_NAME=mylatex
-    VERSION=1.0.0
-    EOF
-    ```
-1. イメージのビルド
-    ```sh
-    docker-compose up -d --build
-    ```
-1. 権限変更
-    ```sh
-    sudo chmod -R 777 .vscode-server
-    sudo chmod -R 777 src
+    sudo chmod +x /install.sh
+    ./install.sh
     ```
 1. VSCode を起動しコンテナにアタッチ
 1. コンテナ内で VSCode の拡張機能 "LaTeX Workshop" を有効に

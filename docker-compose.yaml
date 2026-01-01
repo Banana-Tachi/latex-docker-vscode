@@ -3,7 +3,11 @@ services:
     # コンテナ名
     container_name: ${CONTAINER_NAME}
     # Dockerfileへのパス
-    build: .
+    build:
+      context: .
+      args:
+        - USER_UID=${UID:-1000}
+        - USER_GID=${GID:-1000}
     # ビルドされたイメージのタグ
     image: ${HOST_NAME}/${SERVICE_NAME}:${VERSION}
     # ボリュームマウント

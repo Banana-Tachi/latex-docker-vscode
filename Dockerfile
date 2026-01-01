@@ -1,8 +1,15 @@
 # texliveの公式イメージを使う
 FROM texlive/texlive:latest
 
-# ユーザーの追加（公式イメージではtexliveというユーザーがある）
+# ホストのUID/GIDを反映させるための引数
 ARG USERNAME=texlive
+ARG USER_UID=1000
+ARG USER_GID=1000
+
+RUN groupmod -g $USER_GID $USERNAME || true \
+    && usermod -u $USER_UID -g $USER_GID $USERNAME \
+    && mkdir -p /home/$USERNAME/.vscode-server /home/$USERNAME/src \
+    && chown -R $USERNAME:$USERNAME /home/$USERNAME
 
 # ユーザー切り替え
 USER $USERNAME
