@@ -4,7 +4,7 @@
 1. インストールシェル実行  
     （ ``.env`` の生成と Docker イメージのビルドの実行をするシェル）
     ```sh
-    sudo chmod +x /install.sh
+    sudo chmod +x ./install.sh
     ./install.sh
     ```
 1. VSCode を起動しコンテナにアタッチ
